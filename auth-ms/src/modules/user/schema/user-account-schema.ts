@@ -22,6 +22,9 @@ export class UserAccount {
   @Prop()
   profile: string;
 
+  @Prop({ enum: ['admin', 'user'], default: 'user' })
+  role: string;
+
   @Prop({ required: false, default: null })
   @Exclude()
   resetPasswordToken: string;
