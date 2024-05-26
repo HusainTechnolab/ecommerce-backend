@@ -10,12 +10,12 @@ export class CategoriesController {
 
   @EventPattern({ cmd: MICRO_SERVICE.CATEGORIES.EVENTS.CREATE })
   createCategory(@Payload() payload: IPayload) {
-    return;
+    return this.categoriesService.create(payload);
   }
 
   @EventPattern({ cmd: MICRO_SERVICE.CATEGORIES.EVENTS.UPDATE })
   updateCategory(@Payload() payload: IPayload) {
-    return;
+    return this.categoriesService.update(payload);
   }
 
   @EventPattern({ cmd: MICRO_SERVICE.CATEGORIES.EVENTS.FIND_ALL })

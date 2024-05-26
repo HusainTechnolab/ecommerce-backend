@@ -5,7 +5,7 @@ import { ApiTags } from '@nestjs/swagger';
 @Controller('sub-categories')
 @ApiTags('Sub-Categories')
 export class SubCategoriesController {
-  constructor(private readonly subCategoriesService: SubCategoriesService) { }
+  constructor(private readonly subCategoriesService: SubCategoriesService) {}
 
   @Post('/new')
   createSubCategory() {

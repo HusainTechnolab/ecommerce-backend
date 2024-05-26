@@ -17,3 +17,17 @@ export const AUTH = {
   },
   EVENT_QUEUE: 'auth',
 };
+
+export const CATEGORIES = {
+  NAME: 'CATEGORIES',
+  TCP_PORT: Number(process.env.CATEGORIES_TCP_PORT),
+  TCP_HOST: process.env.CATEGORIES_TCP_HOST,
+  EVENTS: {
+    CREATE: 'CATEGORY_CREATE',
+    UPDATE: 'CATEGORY_UPDATE',
+    DELETE: 'CATEGORY_DELETE',
+    FIND_ALL: 'CATEGORY_FIND_ALL',
+    FIND_ONE: 'CATEGORY_FIND_ONE',
+  },
+  EVENT_QUEUE: 'categories',
+};

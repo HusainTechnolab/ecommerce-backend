@@ -24,6 +24,6 @@ export class SignUpDto {
   password: string;
 
   @IsOptional()
-  @ApiProperty({ type: 'string', format: 'binary', required: true })
+  @ApiProperty({ type: 'string', format: 'binary', required: false })
   profile: any;
 }

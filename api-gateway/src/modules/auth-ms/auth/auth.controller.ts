@@ -24,7 +24,7 @@ export class AuthController {
   @UseInterceptors(
     FileInterceptor('profile', {
       storage: diskStorage({
-        destination: 'src/images',
+        destination: 'src/images/users',
         filename: (req, file, cb) => {
           const randomName = Array(32)
             .fill(null)
@@ -41,7 +41,7 @@ export class AuthController {
     @UploadedFile() profile: Express.Multer.File,
     @Req() req: { log; user },
   ) {
-    body.profile = profile.path ? profile.path : null;
+    body.profile = profile ? profile.path : null;
     return this.authService.signUp(req, body);
   }
 
